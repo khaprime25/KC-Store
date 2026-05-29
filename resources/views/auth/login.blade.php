@@ -144,7 +144,7 @@ label {
         <!-- Header -->
         <div class="auth-header">
             <div class="auth-logo">
-                Mini <span>Store</span>
+                KC <span>Store</span>
             </div>
             <div class="auth-subtitle">
                 Sign in to manage your store

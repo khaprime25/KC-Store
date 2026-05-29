@@ -2067,6 +2067,51 @@ table {
     transform: translateY(-5px);
 }
 
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .product-details-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 30px auto;
+    }
+
+    .product-gallery img {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .product-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .product-meta {
+        flex-wrap: wrap;
+    }
+
+    .product-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .mobile-quantity-wrapper {
+        width: 100%;
+    }
+
+    .quantity {
+        width: 80px !important;
+        text-align: center;
+    }
+
+    .ecom-search-btn {
+        width: 100% !important;
+    }
+
+}
+
 /* MOBILE */
 
 @media(max-width:768px) {
