@@ -75,17 +75,12 @@
                 <a class="fw-bold text-success m-0" style="text-decoration:none" href="{{route('admin.category.product.ProductVariant.getAllProductVariants')}}">Product Variants</a>
             </h4>
 
-            <a href="{{ route('admin.category.product.productVariant.create' , [
-
-                $productVariants->isNotEmpty()
-                    ? $productVariants->first()->product->category_id
-                    : $category_id,
-
-                $productVariants->isNotEmpty()
-                    ? $productVariants->first()->product_id
-                    : $product_id
-
-            ]) }}"
+            <a href="{{ $isGlobal
+                ? route('admin.category.product.productVariant.globalCreate')
+                : route(
+                    'admin.category.product.productVariant.create',
+                    [$category_id, $product_id]
+                ) }}"
                 class="btn btn-success px-3 py-2 rounded-3 fw-semibold">
 
                 <i class="fa-solid fa-plus me-2"></i>

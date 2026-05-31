@@ -44,6 +44,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->as('admin.')->group(funct
         'update' => 'category.product.productVariant.update',
         'destroy' => 'category.product.productVariant.destroy',
     ]);
-
-
+    Route::get('category/product/productVariant/create-global',[ProductVariantController::class, 'globalCreate'])->name('category.product.productVariant.globalCreate');
+    Route::get('productVariant/search-products', [ProductVariantController::class, 'searchProducts'])->name('productVariant.searchProducts');
+    Route::post('productVariant/store-global',[ProductVariantController::class, 'storeGlobal'])->name('productVariant.storeGlobal');
 });

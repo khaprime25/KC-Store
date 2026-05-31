@@ -25,14 +25,21 @@ class ProductVariantRepository implements ProductVariantRepositoryInterface
         return ProductVariant::where('product_id', $product_id)->paginate(6);
     }
 
-    public function createProductVariant(?int $category_id, ?int $product_id) {
-        if($category_id == 1 || $category_id == null && $product_id == 1 || $product_id == null) {
-            $products = Product::all();
-        }else {
-            $products = Product::where('category_id', $category_id)->where('id', $product_id)->get();
+    public function createProductVariant(
+        ?int $category_id,
+        ?int $product_id
+    ) {
+        if ($category_id === null || $product_id === null) {
+
+            return Product::all();
+
         }
-        return $products;
+
+        return Product::where('category_id', $category_id)
+            ->where('id', $product_id)
+            ->get();
     }
+    
     public function storeProductVariant(array $productVariantData) {
         return ProductVariant::create($productVariantData);
     }

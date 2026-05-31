@@ -6,10 +6,17 @@
 
     {{-- SUCCESS ALERT --}}
     @if (session('success'))
-        <div class="modern-alert success-alert">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>{{ session('success') }}</span>
-        </div>
+
+            <div class="alert alert-success w-75 mx-auto alert-dismissible fade show" role="alert">
+
+                {{ session('success') }}
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"></button>
+
+            </div>
     @endif
 
     <div class="main-container cart-page">
@@ -121,13 +128,6 @@
                 <div class="payment-info-grid">
 
                     <div class="payment-info-item">
-                        <span>Total Amount</span>
-                        <h4 id="orderTotal">
-                            0 Ks
-                        </h4>
-                    </div>
-
-                    <div class="payment-info-item">
                         <span id="paymentNameLabel">
                             Payment Account Name
                         </span>
@@ -146,7 +146,13 @@
                             Select a payment method
                         </h4>
                     </div>
-
+                    
+                    <div class="payment-info-item">
+                        <span>Total Amount</span>
+                        <h4 id="orderTotal">
+                            0 Ks
+                        </h4>
+                    </div>
                 </div>
 
                 {{-- FORM --}}

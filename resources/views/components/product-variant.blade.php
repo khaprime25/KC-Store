@@ -58,8 +58,7 @@
     @else
 
         {{-- STORE SECTION --}}
-        @if ($productVariant || $products->first()->id == 1)
-
+            @if ($products->count() > 1)
             <div class="mb-4">
 
                 @foreach ($products as $product)
