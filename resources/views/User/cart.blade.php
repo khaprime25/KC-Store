@@ -72,18 +72,25 @@
                             Choose Payment
                         </label>
 
-                        <select id="paymentSelect" class="modern-select">
+                        <select
+                            id="paymentSelect"
+                            name="payment_id"
+                            class="modern-select">
+
                             <option value="" selected disabled>
                                 -- Choose Payment Method --
                             </option>
 
                             @foreach($payments as $payment)
-                                <option value="{{ $payment->id }}" 
-                                        data-account-name="{{ $payment->account_name }}" 
-                                        data-account-number="{{ $payment->account_number }}">
+                                <option
+                                    value="{{ $payment->id }}"
+                                    data-method="{{ $payment->method }}"
+                                    data-account-name="{{ $payment->account_name }}"
+                                    data-account-number="{{ $payment->account_number }}">
                                     {{ $payment->method }}
                                 </option>
                             @endforeach
+
                         </select>
 
                         <button id="proceedToPaymentBtn"
@@ -115,18 +122,26 @@
 
                     <div class="payment-info-item">
                         <span>Total Amount</span>
-                        <h4 id="orderTotal"></h4>
+                        <h4 id="orderTotal">
+                            0 Ks
+                        </h4>
                     </div>
 
                     <div class="payment-info-item">
-                        <span>{{ $payment->method }} Name</span>
+                        <span id="paymentNameLabel">
+                            Payment Account Name
+                        </span>
+
                         <h4 id="accountName">
                             Select a payment method
                         </h4>
                     </div>
 
                     <div class="payment-info-item">
-                        <span>{{ $payment->method }} Number</span>
+                        <span id="paymentNumberLabel">
+                            Payment Account Number
+                        </span>
+
                         <h4 id="accountNumber">
                             Select a payment method
                         </h4>
@@ -326,7 +341,13 @@ $(document).ready(function () {
         ) || 1;
 
         $.post('/cart/update-quantity', {
+
+            _token:
+                $('meta[name="csrf-token"]')
+                    .attr('content'),
+
             cart_id: cartId,
+
             quantity: quantity
         });
     }
@@ -433,14 +454,7 @@ $(document).ready(function () {
                 } else {
 
                     alert('Failed to remove item.');
-
                 }
-            },
-
-            error: function () {
-
-                alert('Something went wrong.');
-
             }
         });
     });
@@ -454,35 +468,65 @@ $(document).ready(function () {
         const selectedOption =
             $('#paymentSelect option:selected');
 
+        if (!selectedOption.val()) {
+
+            alert('Please select a payment method.');
+
+            return;
+        }
+
+        const method =
+            selectedOption.data('method');
+
+        const accountName =
+            selectedOption.data('account-name');
+
+        const accountNumber =
+            selectedOption.data('account-number');
+
         const totalPrice =
             $('#cartTotal')
-            .text()
-            .replace('Ks', '')
-            .replace(/,/g, '')
-            .trim();
+                .text()
+                .replace('Ks', '')
+                .replace(/,/g, '')
+                .trim();
 
         $('#orderTotal').text(
             $('#cartTotal').text()
         );
 
         $('#accountName').text(
-            selectedOption.data('account-name')
-            || 'Select payment'
+            accountName
         );
 
         $('#accountNumber').text(
-            selectedOption.data('account-number')
-            || 'Select payment'
+            accountNumber
+        );
+
+        $('#paymentNameLabel').text(
+            method + ' Name'
+        );
+
+        $('#paymentNumberLabel').text(
+            method + ' Number'
         );
 
         $('#paymentMethodId').val(
             selectedOption.val()
         );
 
-        $('#cart_total').val(totalPrice);
+        $('#cart_total').val(
+            totalPrice
+        );
 
         $('#paymentDetailsCard')
             .removeClass('d-none');
+
+        $('html, body').animate({
+            scrollTop:
+                $('#paymentDetailsCard')
+                    .offset().top - 100
+        }, 300);
     });
 
     /* ===================================

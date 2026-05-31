@@ -95,9 +95,18 @@
                     {{-- ACTION --}}
                     <td>
 
-                        <button class="remove-btn removeBtn">
-                            Remove
-                        </button>
+                        <div
+                            data-cart-id="{{ $cartData->id }}">
+
+                            <button
+                                type="button"
+                                class="removeBtn mobile-remove-btn">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </div>
 
                     </td>
 
@@ -127,8 +136,10 @@
             {{-- TOP --}}
             <div class="mobile-cart-top">
 
-                <img src="{{ asset('images/' . $cartData->productVariant->image) }}"
-                    class="mobile-cart-image">
+                <img
+                    src="{{ asset('images/' . $cartData->productVariant->image) }}"
+                    class="mobile-cart-image"
+                    alt="Product">
 
                 <div>
 
@@ -144,24 +155,30 @@
 
             </div>
 
-            {{-- IMPORTANT HIDDEN PRICE --}}
-            <div class="productPrice d-none"
+            {{-- HIDDEN PRICE --}}
+            <div
+                class="productPrice d-none"
                 data-price="{{ $cartData->productVariant->price }}">
             </div>
 
             {{-- QUANTITY --}}
             <div class="mobile-quantity-wrapper">
 
-                <button class="qty-btn decrease">
+                <button
+                    type="button"
+                    class="qty-btn decrease">
                     -
                 </button>
 
-                <input type="number"
+                <input
+                    type="number"
                     class="form-control quantity"
                     value="{{ $cartData->quantity }}"
                     min="1">
 
-                <button class="qty-btn increase">
+                <button
+                    type="button"
+                    class="qty-btn increase">
                     +
                 </button>
 
@@ -177,6 +194,19 @@
                 </strong>
 
             </div>
+
+            {{-- REMOVE --}}
+            <button
+                type="button"
+                class="removeBtn mobile-remove-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                <span class="ms-2">
+                    Remove Item
+                </span>
+
+            </button>
 
         </div>
 

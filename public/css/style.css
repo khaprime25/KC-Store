@@ -1976,6 +1976,23 @@ table {
     font-size: 1rem;
 }
 
+.mobile-remove-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #dc3545;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.mobile-remove-btn:hover {
+    opacity: .9;
+}
+
 /* ===================================
    CONTACT PAGE
 =================================== */
@@ -2373,7 +2390,7 @@ table {
 .payment-info-grid {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -2393,6 +2410,7 @@ table {
     font-size: 22px;
     font-weight: 800;
     color: #102a43;
+    word-break: break-word;
 }
 
 /* FORM */
@@ -2594,6 +2612,20 @@ table {
 
 }
 
+@media (max-width: 768px) {
+
+    .payment-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-info-item {
+        padding: 18px;
+    }
+
+    .payment-info-item h4 {
+        font-size: 18px;
+    }
+}
 
 @media (max-width: 991px) {
 

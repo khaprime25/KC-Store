@@ -32,8 +32,8 @@ class UserRepositroy implements UserRepositoryInterface
         $categories = Category::all();
         $products = $this->filterProducts($category_id, $product_id);
         $productVariants = $this->filterProductVariants($products, $category_id, $product_id); 
-        $products = $products->paginate(9);
-        $productVariants = $productVariants->paginate(6);
+        $products = $products->paginate(9)->withQueryString();
+        $productVariants = $productVariants->paginate(6)->withQueryString();
         return ['categories' => $categories , 'products' => $products, 'productVariants' => $productVariants];
     }
 

@@ -19,7 +19,7 @@
                         <label for="min_price" class="d-inline text-dark fw-bolder fs-6">Min Price :  </label><input type="number" name="min_price" id="min_price" class="search-input my-2 d-inline" value="{{ request('min_price') }}">
                     </div>
                     <div class="">
-                        <label for="max_price" class="d-inline text-dark fw-bolder fs-6">Max Price :  <input type="number" name="max_price" id="max-price" class="search-input my-2 d-inline" value="{{ request('max_price') }}">
+                        <label for="max_price" class="d-inline text-dark fw-bolder fs-6">Max Price :  </label><input type="number" name="max_price" id="max-price" class="search-input my-2 d-inline" value="{{ request('max_price') }}">
                     </div>
                     <input type="hidden" name="search" value="{{ request('search') }}">
                     <button class="search-button my-2 w-100" type="submit"><i class="fa-solid fa-filter me-2"></i>Filter </button>
