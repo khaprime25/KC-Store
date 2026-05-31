@@ -46,8 +46,8 @@
     ]"/>
     {{-- @dd(isset($category_id), $category_id) --}}
     <div class="content">
-        <label class="mb-4 underline_link fs-3">
-            Create Product Variant (Global Search)
+        <label class="mb-4 link fs-3">
+            Create Product Variant !
         </label>
 
         <form action="{{ route('admin.productVariant.storeGlobal') }}"

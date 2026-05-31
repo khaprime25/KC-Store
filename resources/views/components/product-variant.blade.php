@@ -1,8 +1,8 @@
 <label for="price"
-        class="mb-4 underline_link fs-3">
+        class="mb-4 link fs-3">
 
     {{ $productVariant ? "Update" : "Create" }}
-    Product Variants Below !
+    Product Variant !
 
 </label>
 
@@ -37,15 +37,9 @@
 
         <div class="mb-4">
 
-            <h4 class="fw-bold">
+            <h4 >
 
-                {{ $productVariant->product->brand }}
-
-                <span class="text-secondary">
-
-                    ( {{ $productVariant->product->item }} )
-
-                </span>
+                {{ $productVariant->product->brand }} ( {{ $productVariant->product->item }} )
 
             </h4>
 

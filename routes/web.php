@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CartController;
 
 Route::get('/', function () {
     return to_route('user.dashboard');
@@ -17,12 +19,14 @@ Route::post('/cart/update-quantity', [UserController::class, 'updateQuantity']);
 
 Route::middleware('auth')->group(function () {
     Route::post('/review', [UserController::class,'review'])->name('user.review');
-    Route::get('/cart', [UserController::class, 'cart'])->name('user.cart');
-    Route::post('/cart', [UserController::class, 'storeCart'])->name('user.cart.store');
-    Route::get('/remove/cart', [UserController::class, 'removeCart'])->name('user.remove.cart');
-    Route::get('/order', [ UserController::class, 'order'])->name('user.order');
-    Route::get('/user/order/{id}', [UserController::class, 'orderShow'])->name('user.order.show');    
-    Route::post('/order', [ UserController::class, 'storeOrder'])->name('user.order.store');
+    // Cart Section
+    Route::get('/cart', [CartController::class, 'cart'])->name('user.cart');
+    Route::post('/cart', [CartController::class, 'storeCart'])->name('user.cart.store');
+    Route::get('/remove/cart', [CartController::class, 'removeCart'])->name('user.remove.cart');
+    // Order Section
+    Route::get('/order', [ OrderController::class, 'order'])->name('user.order');
+    Route::get('/user/order/{id}', [OrderController::class, 'orderShow'])->name('user.order.show');    
+    Route::post('/order', [ OrderController::class, 'storeOrder'])->name('user.order.store');
 
 });
 

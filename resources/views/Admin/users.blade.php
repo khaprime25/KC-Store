@@ -43,11 +43,23 @@
         ]
     ]" />
     <div class="content">
+
+        {{-- SUCCESS ALERT --}}
         @if (session('success'))
-        <div class="alert alert-success w-75" role="alert">
-            {{ session('success') }}
-        </div>
+
+            <div class="alert alert-success w-75 mx-auto alert-dismissible fade show" role="alert">
+
+                {{ session('success') }}
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"></button>
+
+            </div>
+
         @endif
+
         {{-- USERS TABLE --}}
         <div class="table-responsive">
 
@@ -205,6 +217,6 @@
             </table>
 
         </div>
-        <button class="btn btn-outline-dark" onclick="history.back()" type="button"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <button class="btn btn-dark mt-2" onclick="history.back()" type="button"><i class="fa-solid fa-arrow-left"></i> Back</button>
     </div>
 </x-layout>

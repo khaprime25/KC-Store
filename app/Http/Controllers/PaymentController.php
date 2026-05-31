@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Interfaces\PaymentRepositoryInterface;
 use Illuminate\Http\Request;
 
@@ -19,7 +18,7 @@ class PaymentController extends Controller
     {
         $selectedPayment = null;
         $payments = $this->paymentRepository->getAllPayments();
-        return view('Admin.payment', [ 'payments' => $payments, 'selectedPayment' => $selectedPayment]);
+        return view('Payment.index', [ 'payments' => $payments, 'selectedPayment' => $selectedPayment]);
     }
 
     public function store(Request $request)

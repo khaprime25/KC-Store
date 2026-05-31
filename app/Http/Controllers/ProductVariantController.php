@@ -28,7 +28,7 @@ class ProductVariantController extends Controller
         $productVariants = $this->productVariantRepository
             ->getAllProductVariants();
 
-        return view('product_variant.index', [
+        return view('Product_variant.index', [
                 'productVariants' => $productVariants,
                 'isGlobal' => true,
             ]);
@@ -42,7 +42,7 @@ class ProductVariantController extends Controller
         $productVariants = $this->productVariantRepository
             ->getAllProductVariantsByProduct($product_id);
 
-        return view('product_variant.index', [
+        return view('Product_variant.index', [
             'productVariants' => $productVariants,
             'category_id' => $category_id,
             'product_id' => $product_id,
@@ -57,7 +57,7 @@ class ProductVariantController extends Controller
         $products = $this->productVariantRepository
             ->createProductVariant($category_id, $product_id);
 
-        return view('product_variant.create', [
+        return view('Product_variant.create', [
             'category_id' => $category_id,
             'product_id' => $product_id,
             'products' => $products,
@@ -70,7 +70,7 @@ class ProductVariantController extends Controller
         $products = $this->productVariantRepository
             ->createProductVariant(null, null);
 
-        return view('product_variant.globalCreate', [
+        return view('Product_variant.globalCreate', [
             'products' => $products,
         ]);
     }
@@ -181,7 +181,7 @@ class ProductVariantController extends Controller
         int $product_id,
         ProductVariant $productVariant
     ) {
-        return view('product_variant.show', [
+        return view('Product_variant.show', [
             'productVariant' => $productVariant,
         ]);
     }
@@ -193,7 +193,7 @@ class ProductVariantController extends Controller
     ) {
         $products = null;
 
-        return view('product_variant.edit', [
+        return view('Product_variant.edit', [
             'category_id' => $productVariant->product->category_id,
             'product_id' => $productVariant->product_id,
             'products' => $products,

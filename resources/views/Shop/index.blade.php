@@ -5,14 +5,6 @@
     <div class="row mx-auto">
         <div class="col-0 col-md-3 col-lg-3 userSiderbar">
 
-            <!-- <div class="my-3">
-                <form action="{{ route('user.shop') }}" method="GET" class="search-form w-25">
-                    <input type="text" name="search" class="search-input" placeholder="Search for products..." value="{{ request('search') }}" />
-                    <input type="hidden" name="min_price" value="{{ request('min_price') }}">
-                    <input type="hidden" name="max_price" value="{{ request('max_price') }}">
-                    <button type="submit" class="btn btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-            </div> -->
             <div class="border-bottom py-1 mt-3">
                 <form action="{{ route('user.shop') }}" method="GET">
                     <div class="">

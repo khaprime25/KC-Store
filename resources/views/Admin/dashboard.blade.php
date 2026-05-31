@@ -236,7 +236,7 @@
                     </a>
                 </div>
             </div>
-            <button class="btn btn-outline-dark" onclick="history.back()" type="button"><i class="fa-solid fa-arrow-left"></i> Back</button>
+            <button class="btn btn-dark" onclick="history.back()" type="button"><i class="fa-solid fa-arrow-left"></i> Back</button>
             </div>
     </div>
 
