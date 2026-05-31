@@ -22,7 +22,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => '1 Box contain 10 packs',
                 'product_id' => Product::where('brand', 'Winston Dark Blue')->where('item', 'Cigarette')->first()->id,
-                'image' => null
+                'image' => 'Winston.jpg',
             ],
             [
                 'price' => 3200,
@@ -30,7 +30,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => '1 pack contain 20 cigarettes',
                 'product_id' => Product::where('brand', 'Winston Dark Blue')->where('item', 'Cigarette')->first()->id,
-                'image' => null
+                'image' => 'Winston.jpg'
             ],
             // Coffee
             [
@@ -39,7 +39,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A good day starts with a cup of coffee',
                 'product_id' => Product::where('brand', 'NesCafe')->where('item', 'Coffee')->first()->id,
-                'image' => null
+                'image' => 'NesCafeBNB.jpg'
             ],
             [
                 'price' => 18000,
@@ -47,7 +47,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A good day starts with a cup of coffee',
                 'product_id' => Product::where('brand', 'NesCafe')->where('item', 'Coffee')->first()->id,
-                'image' => null
+                'image' => 'NesCafeCL.jpg'
             ],
             [
                 'price' => 20000,
@@ -55,7 +55,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A good day starts with a cup of coffee',
                 'product_id' => Product::where('brand', 'NesCafe')->where('item', 'Coffee')->first()->id,
-                'image' => null
+                'image' => 'NesExpresso.jpg'
             ],
             [
                 'price' => 18000,
@@ -63,7 +63,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A good day starts with a cup of coffee',
                 'product_id' => Product::where('brand', 'NesCafe')->where('item', 'Coffee')->first()->id,
-                'image' => null
+                'image' => 'NesIC.jpg'
             ],
             [
                 'price' => 16000,
@@ -71,7 +71,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A good day starts with a cup of coffee',
                 'product_id' => Product::where('brand', 'Birdy')->where('item', 'Coffee')->first()->id,
-                'image' => null
+                'image' => 'BirdyC.jpg'
             ],
             // Rice
             [
@@ -80,7 +80,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A good meal for your Family',
                 'product_id' => Product::where('brand', 'Premium Thai Rice')->where('item', 'Long Rice')->first()->id,
-                'image' => null
+                'image' => 'RiceCHHC.jpg'
             ],
             [
                 'price' => 45000,
@@ -88,7 +88,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A good meal for your Family',
                 'product_id' => Product::where('brand', 'Premium Thai Rice')->where('item', 'Long Rice')->first()->id,
-                'image' => null
+                'image' => 'RiceCHHCWS.jpg'
             ],
             [
                 'price' => 220000,
@@ -96,7 +96,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A good meal for your Family',
                 'product_id' => Product::where('brand', 'Master Chef')->where('item', 'Long Rice')->first()->id,
-                'image' => null
+                'image' => 'RiceMC.jpg'
             ],
             [
                 'price' => 260000,
@@ -104,7 +104,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A premium meal for your Family',
                 'product_id' => Product::where('brand', 'Blue Sick')->where('item', 'Long Rice')->first()->id,
-                'image' => null
+                'image' => 'RiceBS.jpg'
             ],
             [
                 'price' => 320000,
@@ -112,7 +112,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'A premium meal for your Family',
                 'product_id' => Product::where('brand', 'Basmati')->where('item', 'Long Rice')->first()->id,
-                'image' => null
+                'image' => 'RiceBasmati.jpg'
             ],
             // Oil
             [
@@ -121,7 +121,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Purtiy is priority for your health!',
                 'product_id' => Product::where('brand', 'A M H')->where('item', 'Peanut Oil')->first()->id,
-                'image' => null
+                'image' => 'OilAMH.jpg'
             ],
             [
                 'price' => 65000,
@@ -129,7 +129,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Purtiy is priority for your health!',
                 'product_id' => Product::where('brand', 'Golden Maize')->where('item', 'Peanut Oil')->first()->id,
-                'image' => null
+                'image' => 'OilGoldenMaize.jpg'
             ],
             [
                 'price' => 25000,
@@ -137,7 +137,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'For your good heart health!',
                 'product_id' => Product::where('brand', 'The King')->where('item', 'Sunflower Oil')->first()->id,
-                'image' => null
+                'image' => 'OilTheKing.jpg'
             ],
             [
                 'price' => 60000,
@@ -145,7 +145,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'For your good heart health!',
                 'product_id' => Product::where('brand', 'The King')->where('item', 'Sunflower Oil')->first()->id,
-                'image' => null
+                'image' => 'OilTheKing.jpg'
             ],
             [
                 'price' => 115000,
@@ -153,7 +153,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'For your good heart health!',
                 'product_id' => Product::where('brand', 'The King')->where('item', 'Sunflower Oil')->first()->id,
-                'image' => null
+                'image' => 'OilTheKing.jpg'
             ],
             // Powders
             [
@@ -162,7 +162,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'AJ is the best choice for seasoning!',
                 'product_id' => Product::where('brand', 'AJ')->where('item', 'Sweet Powder')->first()->id,
-                'image' => null
+                'image' => 'PowderAJ.jpg'
             ],
             [
                 'price' => 12500,
@@ -170,7 +170,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Dashi is the best choice for seasoning!',
                 'product_id' => Product::where('brand', 'U Ma Mi')->where('item', 'Fish Powder ( Dashi )')->first()->id,
-                'image' => null
+                'image' => 'PowderDashi.jpg'
             ],
             [
                 'price' => 2500,
@@ -178,7 +178,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 50,
                 'description' => 'Know is the best choice for seasoning!',
                 'product_id' => Product::where('brand', 'Know')->where('item', 'Chicken Powder')->first()->id,
-                'image' => null
+                'image' => 'PowderKnow.jpg'
             ],
             [
                 'price' => 6500,
@@ -186,7 +186,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Dawat is the best choice for seasoning!',
                 'product_id' => Product::where('brand', 'Dawat')->where('item', 'Salt')->first()->id,
-                'image' => null
+                'image' => 'PowderDwat.jpg'
             ],
             [
                 'price' => 6000,
@@ -194,7 +194,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Cook Sense is the best choice for seasoning!',
                 'product_id' => Product::where('brand', 'Cook Sense')->where('item', 'Salt')->first()->id,
-                'image' => null
+                'image' => 'PowderCookedSense.jpg'
             ],
             // Cosmetics
             [
@@ -203,7 +203,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => '24 hours fresh breath!',
                 'product_id' => Product::where('brand', 'Close Up')->where('item', 'Toothpaste')->first()->id,
-                'image' => null
+                'image' => 'TPcloseup.jpg'
             ],
             [
                 'price' => 7500,
@@ -211,7 +211,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => '24 hours fresh breath!',
                 'product_id' => Product::where('brand', 'Close Up')->where('item', 'Toothpaste')->first()->id,
-                'image' => null
+                'image' => 'TPcloseupBlue.jpg'
             ],
             [
                 'price' => 8000,
@@ -219,7 +219,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 50,
                 'description' => '24 hours fresh breath!',
                 'product_id' => Product::where('brand', 'Close Up')->where('item', 'Toothpaste')->first()->id,
-                'image' => null
+                'image' => 'TPcloseupRed.jpg'
             ],
             [
                 'price' => 14000,
@@ -227,7 +227,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Good looking, Good Confidence!',
                 'product_id' => Product::where('brand', 'Nivea')->where('item', 'Facial Wash')->first()->id,
-                'image' => null
+                'image' => 'NivDeep.jpg'
             ],
             [
                 'price' => 12000,
@@ -235,7 +235,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Good looking, Good Confidence!',
                 'product_id' => Product::where('brand', 'Nivea')->where('item', 'Facial Wash')->first()->id,
-                'image' => null
+                'image' => 'NivHydra.jpg'
             ],
             [
                 'price' => 13000,
@@ -243,7 +243,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Good looking, Good Confidence!',
                 'product_id' => Product::where('brand', 'Nivea')->where('item', 'Facial Wash')->first()->id,
-                'image' => null
+                'image' => 'NivAcn.jpg'
             ],
             [
                 'price' => 13000,
@@ -251,7 +251,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Good looking, Good Confidence!',
                 'product_id' => Product::where('brand', 'Nivea')->where('item', 'Facial Wash')->first()->id,
-                'image' => null
+                'image' => 'NivExtraBright.jpg'
             ],
             // Food And Snacks
             [
@@ -260,7 +260,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Easy Bite, Tasty Snack',
                 'product_id' => Product::where('brand', 'Oishi')->where('item', 'Snack Bag')->first()->id,
-                'image' => null
+                'image' => 'OishiPillow.jpg'
             ],
             [
                 'price' => 2000,
@@ -268,7 +268,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Easy Bite, Tasty Snack',
                 'product_id' => Product::where('brand', 'Oishi')->where('item', 'Snack Bag')->first()->id,
-                'image' => null
+                'image' => 'OishiCrispy.jpg'
             ],
             [
                 'price' => 2000,
@@ -276,7 +276,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 50,
                 'description' => 'Easy Bite, Tasty Snack',
                 'product_id' => Product::where('brand', 'Oishi')->where('item', 'Snack Bag')->first()->id,
-                'image' => null
+                'image' => 'OishiPotato.jpg'
             ],
             [
                 'price' => 2000,
@@ -284,7 +284,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 50,
                 'description' => 'Easy Bite, Tasty Snack',
                 'product_id' => Product::where('brand', 'Oishi')->where('item', 'Snack Bag')->first()->id,
-                'image' => null
+                'image' => 'OishiPop.jpg'
             ],
             [
                 'price' => 2000,
@@ -292,7 +292,15 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Need a drink? Remember me!!!',
                 'product_id' => Product::where('brand', 'Milo')->where('item', 'Light Drinks')->first()->id,
-                'image' => null
+                'image' => 'Milo.jpg'
+            ],
+            [
+                'price' => 2000,
+                'size' => '6 pcs', 
+                'stock' => 20,
+                'description' => 'Need a drink? Remember me!!!',
+                'product_id' => Product::where('brand', 'Milo')->where('item', 'Light Drinks')->first()->id,
+                'image' => 'MiloPack.jpg'
             ],
             [
                 'price' => 3000,
@@ -300,7 +308,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Need a drink? Remember me!!!',
                 'product_id' => Product::where('brand', 'Pepsi')->where('item', 'Light Drinks')->first()->id,
-                'image' => null
+                'image' => 'DrinkPepsi.jpg'
             ],
             [
                 'price' => 3000,
@@ -308,7 +316,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Need a drink? Remember me!!!',
                 'product_id' => Product::where('brand', 'Cola')->where('item', 'Light Drinks')->first()->id,
-                'image' => null
+                'image' => 'DrinkCola.jpg'
             ],
             [
                 'price' => 1500,
@@ -316,7 +324,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Need a drink? Remember me!!!',
                 'product_id' => Product::where('brand', 'Sting')->where('item', 'Light Drinks')->first()->id,
-                'image' => null
+                'image' => 'DrinkSting.jpg'
             ],
             [
                 'price' => 2500,
@@ -324,7 +332,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Need a drink? Remember me!!!',
                 'product_id' => Product::where('brand', 'Sprite')->where('item', 'Light Drinks')->first()->id,
-                'image' => null
+                'image' => 'DrinkSprite.jpg'
             ],
             [
                 'price' => 2500,
@@ -332,7 +340,7 @@ class ProductVariantSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Need a drink? Remember me!!!',
                 'product_id' => Product::where('brand', 'Redbull')->where('item', 'Energy Drinks')->first()->id,
-                'image' => null
+                'image' => 'DrinkRedBull.jpg'
             ],
         ];
 

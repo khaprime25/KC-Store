@@ -164,6 +164,27 @@
 
                     </a>
 
+                    <a href="{{ route('user.profiles') }}"
+                    class="ecom-link profile-nav-link">
+
+                        @if(Auth::user()->profile_image)
+
+                            <img src="{{ asset(auth()->user()->profile_image) }}"
+                                alt="Profile"
+                                class="navbar-avatar">
+
+                        @else
+
+                            <i class="fa-solid fa-circle-user"></i>
+
+                        @endif
+
+                        <span class="profile-name">
+                            {{ Auth::user()->name }}
+                        </span>
+
+                    </a>
+
                 @endif
 
 
@@ -242,6 +263,7 @@
 
                 </a>
 
+                
 
                 {{-- LOGIN / LOGOUT --}}
                 @guest
@@ -255,7 +277,26 @@
                     </a>
 
                 @else
+                    <a href="{{ route('user.profiles') }}"
+                        class="mobile-nav-link profile-nav-link">
 
+                            @if(Auth::user()->profile_image)
+
+                                <img src="{{ asset(auth()->user()->profile_image) }}"
+                                    alt="Profile"
+                                    class="navbar-avatar">
+
+                            @else
+
+                                <i class="fa-solid fa-circle-user"></i>
+
+                            @endif
+
+                            <span class="profile-name">
+                                {{ Auth::user()->name }}
+                            </span>
+
+                    </a>
                     <form action="{{ route('logout') }}"
                         method="POST">
 

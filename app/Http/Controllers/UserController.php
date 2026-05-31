@@ -10,6 +10,7 @@ use App\Models\Review;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use App\Interfaces\UserRepositoryInterface;
+use Illuminate\Support\Facades\File;
 
 class UserController extends Controller
 {
@@ -56,5 +57,55 @@ class UserController extends Controller
     public function contact() {
         $categories = Category::all();
         return view('user.contact', ['categories' => $categories]);
+    }
+
+    public function profile() {
+        $categories = Category::all();
+        return view('user.profile', ['categories' => $categories]);
+    }
+
+    public function updateProfile(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:12',
+            'profile_image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+        ]);
+
+        $user = Auth::user();
+
+        if ($request->hasFile('profile_image')) {
+
+            // Delete old image
+            if (
+                $user->profile_image &&
+                File::exists(public_path($user->profile_image))
+            ) {
+                File::delete(public_path($user->profile_image));
+            }
+
+            $image = $request->file('profile_image');
+
+            $imageName = time() . '_' . $image->getClientOriginalName();
+
+            $image->move(
+                public_path('images/profile_images'),
+                $imageName
+            );
+
+            $user->profile_image = 'images/profile_images/' . $imageName;
+        }
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+
+        $user->save();
+
+        return back()->with(
+            'success',
+            'Profile updated successfully.'
+        );
     }
 }

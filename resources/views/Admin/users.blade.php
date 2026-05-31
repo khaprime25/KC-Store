@@ -83,6 +83,10 @@
                             Email
                         </th>
 
+                        <th scope="col" class="d-none d-lg-table-cell">
+                            Phone
+                        </th>
+
                         <th scope="col" class="text-center">
                             Role
                         </th>
@@ -114,7 +118,7 @@
 
                                 @if ($user->role === "admin")
 
-                                    <span class="badge bg-dark px-3 py-2 rounded-pill">
+                                    <span class="badge bg-dark px-2 py-1 rounded-pill">
 
                                         Admin
 
@@ -148,7 +152,13 @@
 
                             </td>
 
+                            {{-- PHONE --}}
+                            <td class="d-none d-lg-table-cell text-dark">
 
+                                {{ $user->phone ?? '-' }}
+
+                            </td>
+                            
                             {{-- ROLE ADJUST --}}
                             <td>
 

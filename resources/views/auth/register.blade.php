@@ -178,6 +178,17 @@ label {
                     <x-input-error :messages="$errors->get('email')" />
                 </div>
 
+                <!-- Phone -->
+                <div class="form-group">
+                    <x-input-label for="phone" value="Phone Number ( Optional )" />
+                    <x-text-input id="phone"
+                        class="block w-full"
+                        type="text"
+                        name="phone"
+                        :value="old('phone')" />
+                    <x-input-error :messages="$errors->get('phone')" />
+                </div>
+
                 <!-- Password -->
                 <div class="form-group">
                     <x-input-label for="password" value="Password" />

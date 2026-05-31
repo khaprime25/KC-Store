@@ -27,6 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/order', [ OrderController::class, 'order'])->name('user.order');
     Route::get('/user/order/{id}', [OrderController::class, 'orderShow'])->name('user.order.show');    
     Route::post('/order', [ OrderController::class, 'storeOrder'])->name('user.order.store');
+    Route::get('/profiles', [UserController::class, 'profile'])
+        ->name('user.profiles');
+
+    Route::put('/profiles/update', [UserController::class, 'updateProfile'])
+        ->name('user.profiles.update');
 
 });
 
