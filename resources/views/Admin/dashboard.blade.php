@@ -103,8 +103,8 @@
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-orange-800 text-uppercase mb-1">
-                                        Accepted Payments</div>
-                                    <div class="text-black"> {{$paymentCount}} Methods Available</div>
+                                        Payments</div>
+                                    <div class="text-black"> {{$paymentCount}} Methods</div>
                                 </div>
                                 <div class="col-auto">
                                     <i class="fa-solid fa-2x text-warning fa-money-check-dollar"></i>

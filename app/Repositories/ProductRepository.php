@@ -23,7 +23,7 @@ class ProductRepository implements ProductRepositoryInterface
 
     public function getAllProductsByCategoryID(Category $category) 
     {
-        return Product::where('category_id', $category->id)->get();
+        return Product::where('category_id', $category->id)->paginate(5);
     }
 
     public function createProduct(int $category_id)

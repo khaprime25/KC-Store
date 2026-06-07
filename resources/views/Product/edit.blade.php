@@ -50,8 +50,6 @@
             :categories="$categories"
             :product="$product"
         />
-        <button class="btn btn-outline-dark" onclick="history.back()" type="button"><i class="fa-solid fa-arrow-left"></i> Back</button>
-
     </div>
 
 </x-layout>

@@ -222,14 +222,22 @@
             </table>
 
         </div>
-        <div class="d-flex justify-content-between">
-            <div class="">
-                <button class="btn btn-dark mb-2" onclick="history.back()" type="button"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mt-4">
+
+            <button class="btn btn-dark mb-2"
+                    onclick="history.back()"
+                    type="button">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+
+            </button>
+
+            <div class="overflow-auto">
+                {{ $products->links('pagination::bootstrap-5') }}
             </div>
-            <div class="">
-                <span>{{ $products->links('pagination::bootstrap-5') }}</span>
-            </div>    
-        </div> 
+
+        </div>
     </div>
     
 
