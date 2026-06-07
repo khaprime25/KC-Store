@@ -180,7 +180,7 @@
                         @endif
 
                         <span class="profile-name">
-                            {{ Auth::user()->name }}
+                            {{ Str::limit(Auth::user()->name, 1, '') }}                        
                         </span>
 
                     </a>

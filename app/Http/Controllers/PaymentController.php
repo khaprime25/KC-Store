@@ -40,7 +40,7 @@ class PaymentController extends Controller
     {
         $selectedPayment = $this->paymentRepository->editPayment($payment_id);
         $payments = $this->paymentRepository->getAllPayments();
-        return view('Admin.payment', [ 'payments' => $payments, 'selectedPayment' => $selectedPayment ]);
+        return view('Payment.index', [ 'payments' => $payments, 'selectedPayment' => $selectedPayment ]);
     }
 
     public function update(Request $request, int $payment_id)
